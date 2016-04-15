@@ -1,0 +1,17 @@
+{
+  "name": "pagseguro-nodejs",
+  "version": "0.1.0",
+  "description": "Integra a API de pagamento online do PagSeguro",
+  "author": {
+    "name": "Edvaldo Szymonek",
+    "email": "edvaldoszy@gmail.com",
+    "url": "http://edvaldotsi.com"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "request": "^2.71.0",
+    "xml2js": "^0.4.16"
+  }
+}
