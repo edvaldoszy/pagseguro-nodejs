@@ -114,7 +114,7 @@ pagseguro.transaction('TRANSACTION_CODE', function(success, response) {
 
 ### Notificaçoes
 
-**Checando transação através do código de noificação***
+**Checando transação através do código de notificação**
 ```
 pagseguro.notification('NOTIFICATION_CODE', function(success, response) {
     if (success) {
