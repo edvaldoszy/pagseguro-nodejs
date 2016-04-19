@@ -1,6 +1,6 @@
 {
     "name": "pagseguro-nodejs",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Integra a API de pagamento online do PagSeguro",
     "author": {
       "name": "Edvaldo Szymonek",

@@ -1,6 +1,6 @@
 var request = require('request');
-var foreach = require('./foreach');
-var Node = require('./xml-node');
+var foreach = require('./lib/foreach');
+var Node = require('./lib/xml-node');
 
 var self = function(options) {
 
