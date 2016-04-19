@@ -18,10 +18,25 @@ var pagseguro = new PagSeguro({
 });
 ```
 
+**Modo e Debug**
+```
+var pagseguro = new PagSeguro({
+    ...
+    mode: (PagSeguro.MODE_PAYMENT | PagSeguro.MODE_SANDBOX),
+    debug: (true | false)
+});
+```
+
 **Configuração de moeda e referência do pagamento**
 ```
 pagseguro.currency('BRL');
 pagseguro.reference('REFERENCE_CODE');
+```
+
+**Configuração de URLs de redirecionamento e notificação (opcional)**
+```
+pagseguro.redirect('http://www.example.com/callback');
+pagseguro.notify('http://www.example.com/notify');
 ```
 
 **Adicionando produtos**

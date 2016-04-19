@@ -50,6 +50,18 @@ self.prototype.reference = function(str) {
     return this;
 };
 
+self.prototype.redirect = function(url) {
+
+    this.xml.checkout.add(new Node('redirectURL', url));
+    return this;
+};
+
+self.prototype.notify = function(url) {
+
+    this.xml.checkout.add(new Node('notificationURL', url));
+    return this;
+};
+
 self.prototype.addItem = function(params) {
 
     var item = new Node('item', []);

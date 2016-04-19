@@ -10,6 +10,11 @@ var pagseguro = new PagSeguro({
 pagseguro.currency('BRL');
 pagseguro.reference('REFERENCE_CODE');
 
+/* Opcional */
+pagseguro.redirect('http://www.example.com/callback');
+pagseguro.notify('http://www.example.com/notify');
+
+/* Produtos */
 pagseguro.addItem({
     id: '1',
     description: 'Descrição do primeiro produto',
