@@ -10,7 +10,7 @@ Biblioteca para integração do UOL PagSeguro com Nodejs
 
 **Inicializando**
 ```
-var PagSeguro = require('../index');
+var PagSeguro = require('pagseguro-nodejs');
 
 var pagseguro = new PagSeguro({
     email: 'edvaldoszy@gmail.com',
