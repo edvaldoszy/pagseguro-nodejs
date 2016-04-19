@@ -1,30 +1,30 @@
 var PagSeguro = require('../index');
 
-var payment = new PagSeguro.Payments({
+var pagseguro = new PagSeguro({
     email: 'edvaldoszy@gmail.com',
-    token: '95C758FA85A74C56A4B552B06114471C',
-    mode: PagSeguro.Payments.MODE_SANDBOX,
+    token: 'ACCESS_TOKEN',
+    mode: PagSeguro.MODE_SANDBOX,
     debug: true
 });
 
-payment.currency('BRL');
-payment.reference('d99s87das54fdf5s6');
+pagseguro.currency('BRL');
+pagseguro.reference('REFERENCE_CODE');
 
-payment.addItem({
+pagseguro.addItem({
     id: '1',
     description: 'Descrição do primeiro produto',
     amount: '40.00',
     quantity: '1'
 });
 
-payment.addItem({
+pagseguro.addItem({
     id: '2',
     description: 'Descrição do segundo produto',
     amount: '40.00',
     quantity: '9'
 });
 
-payment.sender({
+pagseguro.sender({
     name: 'Edvaldo Szymonek',
     email: 'edvaldoszy@gmail.com',
     phone: {
@@ -33,7 +33,7 @@ payment.sender({
     }
 });
 
-payment.shipping({
+pagseguro.shipping({
     type: 1,
     name: 'Edvaldo Szymonek',
     email: 'edvaldoszy@gmail.com',
@@ -46,7 +46,7 @@ payment.shipping({
     }
 });
 
-payment.checkout(function(success, response) {
+pagseguro.checkout(function(success, response) {
     if (success) {
         console.log('Success');
         console.log(response);
