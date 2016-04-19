@@ -38,7 +38,7 @@ pagseguro.shipping({
     name: 'Edvaldo Szymonek',
     email: 'edvaldoszy@gmail.com',
     address: {
-        stree: 'Endereço',
+        street: 'Endereço',
         number: '10',
         city: 'Nome da cidade',
         state: 'PR',
