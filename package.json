@@ -7,9 +7,21 @@
       "email": "edvaldoszy@gmail.com",
       "url": "http://edvaldotsi.com"
     },
-    "scripts": {
-      "start": "node ./bin/www"
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/edvaldoszy/pagseguro-nodejs.git"
     },
+    "bugs": {
+        "url": "https://github.com/edvaldoszy/pagseguro-nodejs/issues"
+    },
+    "homepage": "https://github.com/edvaldoszy/pagseguro-nodejs#readme",
+    "keywords": [
+        "nodejs",
+        "pagseguro",
+        "uol",
+        "payment",
+        "e-commerce"
+    ],
     "dependencies": {
       "request": "^2.71.0"
     }
