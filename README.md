@@ -13,7 +13,7 @@ Biblioteca para integração do UOL PagSeguro com Nodejs
 var PagSeguro = require('pagseguro-nodejs');
 
 var pagseguro = new PagSeguro({
-    email: 'edvaldoszy@gmail.com',
+    email: 'name@example.com',
     token: 'ACCESS_TOKEN'
 });
 ```
@@ -27,19 +27,22 @@ var pagseguro = new PagSeguro({
 });
 ```
 
-**Configuração de moeda e referência do pagamento**
+**Configuração da moeda e referência do pagamento**
 ```
 pagseguro.currency('BRL');
 pagseguro.reference('REFERENCE_CODE');
 ```
 
-**Configuração de URLs de redirecionamento e notificação (opcional)**
+**Configuração das URLs de redirecionamento e notificação (opcional)**
 ```
 pagseguro.redirect('http://www.example.com/callback');
 pagseguro.notify('http://www.example.com/notify');
 ```
 
 **Adicionando produtos**
+
+A documentaçao completa dos parametros pode se encontrada no site do [PagSeguro](https://pagseguro.uol.com.br/v2/guia-de-integracao/api-de-pagamentos.html#v2-item-api-de-pagamentos-formato-xml)
+
 ```
 pagseguro.addItem({
     id: '1',
@@ -59,8 +62,8 @@ pagseguro.addItem({
 **Configurando informações do comprador**
 ```
 pagseguro.sender({
-    name: 'Edvaldo Szymonek',
-    email: 'edvaldoszy@gmail.com',
+    name: 'Some name',
+    email: 'name@example.com',
     phone: {
         areaCode: '51',
         number: '12345678'
@@ -72,8 +75,8 @@ pagseguro.sender({
 ```
 pagseguro.shipping({
     type: 1,
-    name: 'Edvaldo Szymonek',
-    email: 'edvaldoszy@gmail.com',
+    name: 'Some name',
+    email: 'name@example.com',
     address: {
         street: 'Endereço',
         number: '10',
