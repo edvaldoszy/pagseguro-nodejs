@@ -1,18 +1,17 @@
 var PagSeguro = require('../index');
 
-var pagseguro = new PagSeguro({
+var pagseguro = PagSeguro({
     email: 'edvaldoszy@gmail.com',
     token: 'ACCESS_TOKEN',
-    mode: PagSeguro.MODE_SANDBOX,
+    mode: 'sandbox',
     debug: true
 });
 
-pagseguro.notification('NOTIFICATION_CODE', function(success, response) {
-    if (success) {
+pagseguro.notification('NOTIFICATION_CODE')
+    .then(response => {
         console.log('Success');
         console.log(response);
-    } else {
+    }).catch(error => {
         console.log('Error');
-        console.error(response);
-    }
-});
+        console.error(error);
+    });
